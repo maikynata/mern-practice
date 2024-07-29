@@ -20,5 +20,30 @@ const router = createBrowserRouter([
       },
     ],
   },
-  
-])
+  {
+    path: "/edit/:id",
+    element: <App/>,
+    children: [
+      {
+        path: "/edit/:id",
+        element: <Record/>,
+      },
+    ],
+  },
+  {
+    path: "/create",
+    element: <App/>,
+    children: [
+      {
+        path: "/edit/:id",
+        element: <Record/>,
+      },
+    ],
+  },
+]);
+
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <React.StrictMode>
+    <RouterProvider router={router}/>
+  </React.StrictMode>
+)
