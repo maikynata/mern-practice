@@ -35,7 +35,7 @@ const router = createBrowserRouter([
     element: <App/>,
     children: [
       {
-        path: "/edit/:id",
+        path: "/create",
         element: <Record/>,
       },
     ],
